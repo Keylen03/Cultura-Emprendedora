@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap')
+;
+
+
+h1 {
+    font-family: Fredoka;
+    font-size: 60px;
+}
+.header {
+    background-image: url("../img/Logo1.png"); 
+    background-size: contain; /*Coloca la imagen dentro del contenido*/
+    background-repeat: no-repeat; /*Indica que la imagen no se repita. Es obligatorio indicarlo*/
+    background-position: left; /*Imagen a la izquierda*/
+    background-color: #ffffff; /*Color del fondo detrás de la imagen*/
+    padding: 0.01vh 30px; 
+    /*La unidad de medida vh en CSS representa el porcentaje de la altura de la 
+    ventana del navegador. Los 30px representan la distancia del texto y la imagen*/
+    margin-bottom: 60px; /*Representa la distancia entre el encabezado y el texto que dice
+    "Especifique el número de dispositivos que utilizan electricidad:"*/
+    display: flex; /*se utiliza para crear un contenedor flexible. De no usarlo, se presentara 
+    todo el texto encima de la imagen. Tambien ayuda cuando se presenta la pagina des un
+    celular */
+    flex-direction: column; /*Indica que se coloque el contanido de manera vertical, en una 
+    columna, si se abre la pagina desde un celular.*/
+    align-items: flex-end; /*es útil cuando deseas alinear los elementos flexibles al final 
+    del contenedor flexbox en la dirección del eje transversal.*/
+}
+
+body {
+    font-family:sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.negrita {
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
+    max-height: 80px;
+    margin: 0;
+}
+
+    
+/*contenedor de los iconos del menu*/
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+    padding: 10px 2px; 
+    
+}
+
+nav ul li a {
+    text-decoration: none;
+    
+}
+
+/*nav ul li :hover{
+    background-color: #a7a1a1;
+    padding: 15px 10px;
+    border-radius: 2px;
+}*/
+
+.search input[type="text"],
+.search button {
+    height: 40px;
+}
+
+.search input[type="text"] {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+.search button {
+    background-color: #007791;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+/* Estilos para el menú */
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline-block;
+    position: relative; /* Asegura que el submenu esté posicionado correctamente */
+    
+}
+/*Texto dentro de los iconos del menu*/
+.menu li a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    position: relative; /* Asegura que el submenu esté posicionado correctamente */
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    transition: color 0s; /* Agrega una transición suave al cambio de color */
+}
+
+/* Cambiar color del texto al pasar el cursor sobre el enlace */
+.menu li a:hover {
+    color: #eeca03; /* Cambiar el color del texto al pasar el cursor */
+}
+.submenu {
+    display: none; /* Oculta el submenu por defecto */
+    position: absolute;
+    top: 100%; /* Alinea el submenu debajo del elemento del menú principal */
+    left: 0;
+    background-color: #f5eded;
+}
+
+
+.submenu li a {
+    display: flex; /* Cambiar inline-block por flex */
+    padding: 0;
+    color: #343232;
+    text-decoration: none;
+    transition: color 0s;
+    width: auto;
+    background-color: transparent;
+}
+.submenu li a:hover{
+    color:#eeca03
+}
+
+/* Mostrar el submenu al hacer hover en el elemento del menú */
+.menu li:hover .submenu {
+    display: inline-block;
+}
+/* Estilo para ocultar el contenido adicional por defecto */
+.contenido-adicional {
+    display: none;
+}
+.post_menu{
+    display: none; /* Oculta el submenu por defecto */
+    position: absolute;
+    top: 0; /* Alinea el post_menu arriba con el submenu */
+    left: 100%; /* Posición relativa a la izquierda de su contenedor */
+    background-color: #f5eded;
+}
+.post_menu li a{
+ display: flex; /* Cambiar inline-block por flex */
+    padding: 0;
+    color: #343232;
+    text-decoration: none;
+    transition: color 0s;
+    width: auto;
+    background-color: transparent;   
+}
+
+.post_menu li a :hover{
+  color:#eeca03  
+}
+
+.submenu li:hover .post_menu {
+    display: inline-block;
+}
+
+
+main {
+    padding: 40px 30px 40px;
+}
+
+.main__title {
+    text-align: right;
+    font-size: 60px; /* Tamaño grande para el título principal */
+    margin-bottom: 0 20px; /* Espaciado inferior entre el título principal y el subtítulo */
+    font-family: Fredoka;
+    margin-right: -10px;
+}
+
+.sub__title {
+    text-align: center;
+    font-size: 18px; /* Tamaño más pequeño para el subtítulo */
+}
+
+
+
+
+.main__img{
+    width: 100px; /* La imagen ocupará el 100% del ancho disponible del contenedor */
+    right:100%;
+}
+
+.main{
+    background-image: url("../img/titulo1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #6ee9e9;
+    padding: 5vh 20px;
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.main__text {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: fit-content;
+    text-align: right;
+}
+
+
+.main__phrase {
+    text-align: center;
+    margin-bottom: 10px;
+    
+}
+.sub__phrase {
+    font-size: 18px; /* Tamaño más pequeño para el subtítulo */
+    margin-bottom:100px ;
+    background-size: 100px;
+    text-align: justify;
+}
+.centered-text {
+    display: block;
+    text-align: center; /* Centrar solo esta línea */
+}
+
+.centered-descr {
+    display: block;
+    text-align: center; /* Centrar solo esta línea */
+    margin-bottom: 30px;
+    margin-top: 200px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.animar-frase {
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: desplazamiento 10s infinite;
+  }
+  
+  @keyframes desplazamiento {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .cont_descrip{
+    margin-bottom: 60px;
+    background-color: #eeca03;
+    background-size: 100px 200px;
+  }
+  .image-text-wrapper {
+    overflow: hidden; /* Para evitar que el texto se extienda más allá del contenedor */
+    background-color:#f5eded; /* Color de fondo */
+    padding: 20px; /* Espaciado interno */
+    position: relative; /* Posición relativa para posicionar la imagen */}
+
+  .image-text-wrapper2 {
+    overflow: hidden; /* Para evitar que el texto se extienda más allá del contenedor */
+    background-color: #e0b3d7; /* Color de fondo */
+    padding: 20px; /* Espaciado interno */
+    position: relative; /* Posición relativa para posicionar la imagen */
+}
+.image-text-wrapper3 {
+    overflow: hidden; /* Para evitar que el texto se extienda más allá del contenedor */
+    background-color:#f0deba; /* Color de fondo */
+    padding: 20px; /* Espaciado interno */
+    position: relative; /* Posición relativa para posicionar la imagen */}
+
+.image-text-wrapper img {
+    float: right; /* Imagen flotante a la derecha */
+    margin-left: 20px; /* Espacio entre la imagen y el texto */
+    margin-bottom: 20px; /* Espacio entre la imagen y el borde inferior */
+    border-radius: 15px;
+    } 
+.image-text-wrapper2 img {
+        float: left; /* Imagen flotante a la derecha */
+        margin-right: 20px; /* Espacio entre la imagen y el texto */
+        margin-bottom: 20px; /* Espacio entre la imagen y el borde inferior */
+        border-radius: 15px;
+        
+    }
+.image-text-wrapper3 img {
+        float: right; /* Imagen flotante a la derecha */
+        margin-left: 20px; /* Espacio entre la imagen y el texto */
+        margin-bottom: 20px; /* Espacio entre la imagen y el borde inferior */
+        border-radius: 15px;
+        } 
+
+.image-text-wrapper .text {
+    margin-top: 30px; /* Espacio desde la parte superior del contenedor */
+    text-align: justify; /* Justificar el texto */
+}
+
+.image-text-wrapper2 .text {
+    margin-top: 30px; /* Espacio desde la parte superior del contenedor */
+    text-align: justify; /* Justificar el texto */
+}
+
+.image-text-wrapper3 .text {
+    margin-top: 30px; /* Espacio desde la parte superior del contenedor */
+    text-align: justify; /* Justificar el texto */
+}
+
+.image-text-wrapper::after {
+    content: ""; /* Contenido pseudo-elemento para limpiar el float */
+    display: table;
+    clear: both; /* Limpiar el float */
+}
+.clearfix-container {
+    position: relative;
+}
+
+.description-button {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.description-tooltip {
+    display: none;
+    width: 600px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+
+.description-tooltip.show {
+    display: block;
+}
+
+  
+
+
+
